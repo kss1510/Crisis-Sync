@@ -17,6 +17,7 @@ async function main() {
 
   server.listen(PORT, () => {
     console.log(`🚀 CrisisSync backend running on port ${PORT}`);
+    console.log(`🌐 Health check: http://localhost:${PORT}/api/health`);
   });
 }
 

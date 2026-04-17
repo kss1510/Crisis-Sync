@@ -32,6 +32,13 @@ app.get('/', (req, res) => {
 app.get('/health', (req, res) => {
   res.json({ ok: true, service: 'CrisisSync AI API' });
 });
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
+app.head("/api/health", (req, res) => {
+  res.sendStatus(200);
+});
 
 // ✅ API routes (IMPORTANT CHANGE → /api prefix)
 app.use('/api/auth', authRoutes);
