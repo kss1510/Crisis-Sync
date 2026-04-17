@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useAuthStore } from '../store/authStore.js';
 
-const baseURL = (import.meta.env.VITE_API_URL || '').trim();
+const baseURL = "https://crisissync-backend.onrender.com/api";
 
 export const api = axios.create({
   baseURL,
